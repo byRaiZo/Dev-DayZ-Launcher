@@ -1,0 +1,134 @@
+{
+  "name": "dayz-launcher",
+  "license": "MIT",
+  "displayName": "Dev DayZ Launcher (by RaiZo)",
+  "description": "DayZ Launcher Plugin",
+  "version": "1.0.0",
+  "publisher": "RaiZo",
+  "icon": "images/logo.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/byRaiZo/Dev-DayZ-Launcher.git"
+  },
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "keywords": ["dayz", "server", "launcher", "game", "modding"],
+  "categories": ["Other"],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "rzDevDayzLauncher",
+          "title": "Dev DayZ Launcher",
+          "icon": "images/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "rzDevDayzLauncher": [
+        {
+          "type": "webview",
+          "id": "rzDevDayzLauncher.panel",
+          "name": "",
+          "icon": ""
+        }
+      ]
+    },
+    "configuration": {
+      "type": "object",
+      "title": "Dev DayZ Launcher Configuration",
+      "properties": {
+            "rzDevDayzLauncher.startServerClient": {
+            "type": "string",
+            "default": "",
+            "description": "Путь к ярлыку для запуска Server+Client (Start All).",
+            "group": "Patch Set"
+            },
+            "rzDevDayzLauncher.stopServerClient": {
+            "type": "string",
+            "default": "",
+            "description": "Путь к ярлыку для остановки Server+Client (Kill All).",
+            "group": "Patch Set"
+            },
+            "rzDevDayzLauncher.startServer": {
+            "type": "string",
+            "default": "",
+            "description": "Путь к ярлыку для запуска Server (Start Server).",
+            "group": "Patch Set"
+            },
+            "rzDevDayzLauncher.stopServer": {
+            "type": "string",
+            "default": "",
+            "description": "Путь к ярлыку для остановки Server (Kill Server).",
+            "group": "Patch Set"
+            },
+            "rzDevDayzLauncher.startClient": {
+            "type": "string",
+            "default": "",
+            "description": "Путь к ярлыку для запуска Client (Start Client).",
+            "group": "Patch Set"
+            },
+            "rzDevDayzLauncher.stopClient": {
+            "type": "string",
+            "default": "",
+            "description": "Путь к ярлыку для остановки Client (Kill Client).",
+            "group": "Patch Set"
+            },
+            "rzDevDayzLauncher.btnLabelStartServerClient": {
+            "type": "string",
+            "default": "🚀 Сервер+Клиент",
+            "description": "Надпись на кнопке запуска Server+Client",
+            "group": "Button Labels"
+            },
+            "rzDevDayzLauncher.btnLabelStopServerClient": {
+            "type": "string",
+            "default": "⛔ Остановить всё",
+            "description": "Надпись на кнопке остановки Server+Client",
+            "group": "Button Labels"
+            },
+            "rzDevDayzLauncher.btnLabelStartServer": {
+            "type": "string",
+            "default": "🟢 Сервер 🌐",
+            "description": "Надпись на кнопке запуска Сервер",
+            "group": "Button Labels"
+            },
+            "rzDevDayzLauncher.btnLabelStopServer": {
+            "type": "string",
+            "default": "🔴 Остановить Сервер 🌐",
+            "description": "Надпись на кнопке остановки Сервер",
+            "group": "Button Labels"
+            },
+            "rzDevDayzLauncher.btnLabelStartClient": {
+            "type": "string",
+            "default": "🟢 Клиент 🖥️",
+            "description": "Надпись на кнопке запуска Клиент",
+            "group": "Button Labels"
+            },
+            "rzDevDayzLauncher.btnLabelStopClient": {
+            "type": "string",
+            "default": "🔴 Остановить Клиент 🖥️",
+            "description": "Надпись на кнопке остановки Клиент",
+            "group": "Button Labels"
+            },
+            "rzDevDayzLauncher.configFilePath": {
+            "type": "string",
+            "default": "",
+            "description": "Путь к конфигурационному файлу для открытия через плагин"
+            }
+        }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^12.11.7",
+    "@types/vscode": "^1.50.0",
+    "typescript": "^4.0.3",
+    "vscode-test": "^1.4.0"
+  }
+}
