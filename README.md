@@ -4,7 +4,7 @@
 
 ![Скриншот панели](https://raw.githubusercontent.com/byRaiZo/Dev-DayZ-Launcher/main/images/screenshot_panel.png)
 
-## Контактная информация:
+## Контактная информация: 
 
 - Дискорд: https://discord.gg/4DJJSMEUFW
 - Гитхаб: https://github.com/byRaiZo/Dev-DayZ-Launcher
