@@ -1,0 +1,30 @@
+name: Publish Extension
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Compile Extension
+        run: npm run compile
+
+      - name: Install vsce
+        run: npm install -g vsce
+
+      - name: Publish to Marketplace
+        run: vsce publish -p ${{ secrets.VSCE_PAT }}
